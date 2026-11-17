@@ -13,3 +13,4 @@
 /* Keep small directional symbols legible across browser font fallbacks. */
 .button,.sidebar-bottom>a>span{font-family:var(--mono)}
 .code-notes>p{margin:0}
+@media(min-width:481px) and (max-width:620px){.hero{grid-template-columns:1fr}.hero h1{font-size:72px}.hero-lead{font-size:18px;max-width:360px}.hero-description{font-size:13px;max-width:440px}.hero-visual{min-height:320px;height:320px}.hero-visual img{width:90%;margin-left:5%;transform:rotate(-8deg)}.hero-meta{flex-direction:row;gap:20px}.mini-wave{display:block}}
