@@ -2,7 +2,7 @@ import { mountHardware, hardwareNodes } from './hardware.js?v=2';
 import { mountSoundLab } from './sound-lab.js?v=2';
 import { mountCodeExplorer, codeTopics } from './code-explorer.js?v=2';
 import { mountFirmwares, firmwareCatalog } from './firmwares.js?v=2';
-import { mountSignalAtlas, atlasScenarios } from './signal-atlas.js?v=2';
+import { mountSignalAtlas, atlasScenarios } from './signal-atlas.js?v=3';
 import { mountOperatorExplorer } from './operator-explorer.js?v=2';
 import { mountBuildMap } from './build-map.js?v=2';
 

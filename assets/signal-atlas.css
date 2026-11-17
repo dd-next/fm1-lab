@@ -114,3 +114,5 @@ main{padding-inline:32px}
 @media print{.atlas-toolbar,.atlas-playback,.atlas-component-list{display:none}.atlas-workspace{grid-template-columns:1fr}.atlas-inspector{border-left:0}.atlas-traveler{display:none}}
 
 .signal-atlas .instrument-key{fill:#a8b59a;stroke:#172411;stroke-width:1}.signal-atlas .instrument-knob{fill:#182313;stroke:#7d8b6b;stroke-width:1}.signal-atlas .atlas-play-key{fill:#d9f66f}.signal-atlas .buffer-title{fill:#4f6938;font:18px var(--mono)}.signal-atlas .buffer-a{fill:#b8ce93;stroke:#89a15f}.signal-atlas .buffer-b{fill:#e0e8d2;stroke:#a9b98e}.atlas-has-audio .buffer-a{fill:#c8e96d}.signal-atlas .atlas-zone-label,.signal-atlas .wire-label.pixels-text{display:none}
+
+@media(max-width:720px){.topbar{display:none}.hero-intro .eyebrow{margin-bottom:9px}.hero.visual-overview{padding-top:19px}}
