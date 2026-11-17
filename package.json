@@ -1,0 +1,11 @@
+{
+  "name": "fm1-lab",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "An interactive field guide to the M-VAVE FM-1",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}
