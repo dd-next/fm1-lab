@@ -4,7 +4,9 @@
 
 **[Open the interactive guide](https://dd-next.github.io/fm1-lab/)**
 
-Explore a source-backed hardware map, a note's journey to the audio output, a real Web Audio synthesis lab, a guided firmware code reader, seven firmware comparisons, and a first-experiment checklist.
+Explore an illustrated signal atlas, a six-operator routing explorer, a real Web Audio synthesis lab, a visual firmware build map, seven firmware comparisons, and a first-experiment checklist.
+
+The atlas follows four actions—playing a key, receiving USB MIDI, turning an encoder and loading a saved project—with step/play controls, moving connections and source-linked component notes. The operator explorer shows four verified algorithms from the public web engine. Its waveform sketches explain roles; the separate audio lab is the playable two-operator model.
 
 ## Run locally
 
@@ -24,6 +26,10 @@ Or run `python3 -m http.server 3000` in this folder. Validate JavaScript, local 
 | `index.html` | Learning progression, synthesis primer, developer path and references |
 | `assets/app.js` | Navigation, note trace, rendering-budget example, search and local progress |
 | `assets/hardware.js` | Evidence-backed component explorer |
+| `assets/signal-atlas.js` | Illustrated components, four causal scenarios and step/play transport |
+| `assets/operator-explorer.js` | Six-operator graphs, evaluation order and qualitative waveform sketches |
+| `assets/build-map.js` | Shared application, native SDK and public WebAssembly build paths |
+| `assets/readability.css` | Larger reading and control typography throughout the guide |
 | `assets/code-explorer.js` | Annotated reading routes with pinned upstream source links |
 | `assets/firmwares.js` | Dated comparison data and goal filters |
 | `assets/sound-lab.js` | Original two-operator browser teaching instrument |

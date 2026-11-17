@@ -1,0 +1,1042 @@
+/* Readability pass for the existing field guide.
+   Load after style.css and sound-lab.css, before the new visual modules.
+   Body copy stays comfortable; captions remain secondary without becoming tiny. */
+
+body {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+h2,
+.section-heading h2 {
+  font-size: clamp(34px, 3.2vw, 42px);
+  line-height: 1.14;
+  letter-spacing: -.045em;
+}
+
+.hero h1 {
+  font-size: clamp(52px, 5.5vw, 80px);
+  line-height: 1.03;
+}
+
+.eyebrow,
+.hero-copy .eyebrow,
+.firmware-detail .eyebrow {
+  font-size: 12px;
+  line-height: 1.55;
+  letter-spacing: .065em;
+}
+
+.section-no,
+.hero-copy .section-no {
+  font-size: 12px;
+  width: 30px;
+  height: 27px;
+  flex-shrink: 0;
+}
+
+.tag,
+.micro-number,
+.hardware-lessons .micro-number {
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+code,
+kbd {
+  font-size: .9em;
+}
+
+pre,
+.code-pane pre,
+.path-card pre {
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: left;
+  overflow-x: auto;
+}
+
+.fine-print {
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+}
+
+.source-link,
+.path-card .source-link {
+  font-size: 13px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.button,
+.hero-actions .button,
+.path-card .button,
+.small-button,
+.signal-controls .small-button,
+.complete-button,
+.firmware-filters button {
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 42px;
+}
+
+.text-link,
+.hero-actions .text-link {
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: normal;
+}
+
+.complete-button {
+  text-align: left;
+}
+
+.sidebar {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.brand-lab {
+  font-size: 11px;
+}
+
+.sidebar-caption {
+  font-size: 11px;
+  line-height: 1.65;
+  letter-spacing: .04em;
+  color: #a1ae97;
+}
+
+.sidebar .search-trigger {
+  font-size: 13px;
+  line-height: 1.5;
+  min-height: 44px;
+}
+
+.sidebar nav {
+  flex-shrink: 0;
+}
+
+.sidebar nav a {
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 11px 9px;
+  gap: 10px;
+  min-height: 42px;
+}
+
+.sidebar nav a > span {
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.sidebar nav i {
+  flex-shrink: 0;
+}
+
+.sidebar-bottom {
+  flex-shrink: 0;
+}
+
+.progress-label {
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: .025em;
+  gap: 10px;
+}
+
+.sidebar-bottom p {
+  font-size: 13px;
+  color: #a3ae9a;
+}
+
+.sidebar-bottom > a {
+  font-size: 12px;
+  line-height: 1.6;
+  gap: 8px;
+}
+
+.mobile-header button {
+  font-size: 13px;
+  min-height: 36px;
+}
+
+.topbar,
+.topbar span:first-child,
+.topbar span:last-child {
+  font-size: 11px;
+  line-height: 1.55;
+  letter-spacing: .025em;
+}
+
+.topbar {
+  min-height: 76px;
+  height: auto;
+  padding: 18px 0;
+}
+
+.topbar > span:last-child {
+  flex-wrap: wrap;
+}
+
+.hero-lead {
+  font-size: 19px;
+  line-height: 1.55;
+  max-width: 25ch;
+}
+
+.hero-description {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 42ch;
+}
+
+.hero-meta {
+  font-size: 11px;
+  line-height: 1.6;
+  flex-wrap: wrap;
+  letter-spacing: .035em;
+}
+
+.figure-top,
+.figure-bottom span {
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: .025em;
+}
+
+.orbit-label {
+  font-size: 10px;
+  letter-spacing: .08em;
+}
+
+.hero-specs span {
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.hero-specs > div,
+.hero-specs > a {
+  min-width: 0;
+  align-items: flex-start;
+}
+
+.orientation p,
+.section-heading > p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.orientation > a {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.evidence-key {
+  font-size: 12px;
+  line-height: 1.6;
+  gap: 12px 20px;
+}
+
+.hardware-instruction,
+.hardware-node-subtitle {
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.hardware-node {
+  min-width: 0;
+  min-height: 136px;
+}
+
+.hardware-node-index {
+  font-size: 12px;
+}
+
+.hardware-node-title {
+  font-size: 17px;
+  line-height: 1.3;
+}
+
+.hardware-detail p,
+.three-columns p,
+.signal-detail p,
+.deadline-grid p,
+.deep-dive > div,
+.synthesis-intro p,
+.experiment-list p,
+.boundary-banner p,
+.reading-route ol,
+.version-note p,
+.path-card p,
+.recipe-panel p,
+.recipe-panel ol,
+.arrival-checks label,
+.glossary dd,
+.source-list p {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.three-columns h3,
+.experiment-list h3 {
+  font-size: 23px;
+  line-height: 1.25;
+}
+
+.hardware-detail p,
+.code-pane p,
+.firmware-detail > p {
+  max-width: 76ch;
+}
+
+.hardware-evidence-note,
+.reading-route > p,
+.arrival p,
+.firmware-caption,
+.firmware-footnote {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.hardware-code {
+  overflow-wrap: anywhere;
+}
+
+.signal-controls {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.signal-controls .tag {
+  font-size: 12px;
+  max-width: none;
+}
+
+.signal-stages {
+  overflow-x: auto;
+}
+
+.signal-stages button {
+  flex: 1 0 105px;
+  min-height: 104px;
+  padding: 14px 8px;
+}
+
+.signal-stages small {
+  font-size: 12px;
+}
+
+.signal-stages b {
+  font-size: 14px;
+}
+
+.signal-stages button > span {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.flow-arrow {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.signal-detail code {
+  font-size: 13px;
+}
+
+.budget-panel > label,
+.budget-panel output {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.budget-panel > label {
+  flex-wrap: wrap;
+}
+
+.budget-scale {
+  font-size: 12px;
+  line-height: 1.55;
+  gap: 10px;
+}
+
+.budget-panel #budget-result {
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.deep-dive summary {
+  font-size: 15px;
+  line-height: 1.6;
+  gap: 18px;
+}
+
+.deep-dive summary > span {
+  font-size: 11px;
+  line-height: 1.6;
+  min-width: 112px;
+  max-width: 112px;
+  flex-shrink: 0;
+}
+
+.deep-dive summary > b {
+  flex-shrink: 0;
+}
+
+.experiment-list article > span,
+.switching-note .three-columns b {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.formula {
+  font-size: 14px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.code-tabs button {
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 15px 18px;
+}
+
+.code-pane p,
+.code-pane ul,
+.code-pane ol {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.code-notes p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.code-notes h4 {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.code-explorer .code-label,
+.code-explorer .code-pane .eyebrow code {
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.version-note > span {
+  font-size: 12px;
+  line-height: 1.6;
+  min-width: 92px;
+}
+
+.comparison-table {
+  font-size: 14px;
+  min-width: 680px;
+}
+
+.comparison-table th {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.comparison-table td,
+.comparison-table td:first-child,
+.comparison-table button {
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.comparison-table small,
+.comparison-table tbody th .tag {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.comparison-table tbody th button {
+  min-height: 44px;
+}
+
+.firmware-detail p,
+.firmware-detail ul {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.firmware-detail-grid h4 {
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.firmware-license {
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+}
+
+.firmware-results,
+.firmware-snapshot {
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.arrival-checks input {
+  width: 18px;
+  height: 18px;
+  margin-top: 5px;
+}
+
+.glossary > div {
+  grid-template-columns: 118px minmax(0, 1fr);
+  gap: 20px;
+}
+
+.glossary dt {
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.source-list > a > span {
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: .035em;
+}
+
+.source-list b {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.closing-note > span {
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: .08em;
+}
+
+.closing-note h3 {
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+footer p,
+footer > a:last-child {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+#guide-search {
+  font-size: 16px;
+}
+
+#search-results b {
+  font-size: 16px;
+}
+
+#search-results p {
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.no-js {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* The audio lab uses explicit font shorthands and a few important declarations. */
+.sl-topline {
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: .045em;
+  flex-wrap: wrap;
+}
+
+.sl-model-tag {
+  font-size: 11px;
+  line-height: 1.5;
+  max-width: 100%;
+}
+
+.sl-preset,
+.sl-play,
+.sl-stop {
+  font-size: 14px !important;
+  line-height: 1.5;
+  min-height: 42px;
+}
+
+.sl-operator strong {
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.sl-op-number {
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.sl-kicker {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: .055em;
+}
+
+.sl-control,
+.sl-control output {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.sl-control > span {
+  flex-wrap: wrap;
+  gap: 5px 12px;
+}
+
+.sl-control output {
+  color: var(--sl-text);
+}
+
+.sl-control input {
+  height: 32px;
+}
+
+.sl-route {
+  font-size: 13px;
+  line-height: 1.6;
+  flex-wrap: wrap;
+}
+
+.sl-hint,
+.sl-explainer > p,
+.sl-math p {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+.sl-scope-head,
+.sl-spectrum-head {
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: .035em;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.sl-scope-head span:last-child,
+.sl-spectrum-head span:last-child {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--sl-muted);
+}
+
+.sl-readouts span {
+  font-size: 13px;
+  line-height: 1.55;
+  letter-spacing: .035em;
+  color: var(--sl-muted);
+}
+
+.sl-readouts strong {
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.sl-envelope summary,
+.sl-explainer summary {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.sl-envelope-caption {
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: .035em;
+}
+
+.sl-envelope p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.sl-keyboard {
+  flex-wrap: wrap;
+}
+
+.sl-keyboard button {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  min-width: 32px;
+  min-height: 46px;
+}
+
+.sl-status {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.sl-math code {
+  font-size: 13px !important;
+  line-height: 1.8 !important;
+}
+
+@media (max-width: 1120px) {
+  .hero-specs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-specs > :nth-child(2) {
+    border-right: 0;
+  }
+
+  .three-columns,
+  .experiment-list {
+    gap: 24px;
+  }
+
+  .code-notes {
+    grid-template-columns: 1fr;
+  }
+
+  .reference-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 980px) {
+  :root {
+    --sidebar: 210px;
+  }
+
+  .sidebar {
+    padding-inline: 14px;
+  }
+
+  .sidebar nav a {
+    padding-inline: 6px;
+    gap: 8px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    min-height: 330px;
+    height: 330px;
+  }
+
+  .hero-visual img {
+    width: 85%;
+    margin-left: 7.5%;
+  }
+
+  .hero-meta {
+    flex-direction: row;
+  }
+
+  .three-columns,
+  .experiment-list,
+  .synthesis-intro,
+  .math-grid,
+  .firmware-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sl-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sl-envelope-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 16px;
+  }
+
+  h2,
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 60px;
+  }
+
+  .hero-visual {
+    min-height: 320px;
+    height: 320px;
+  }
+
+  .hero-visual img {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .hero-meta {
+    flex-direction: row;
+    gap: 8px 20px;
+  }
+
+  .hero-specs {
+    gap: 22px 18px;
+  }
+
+  .hero-specs > div,
+  .hero-specs > a {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    min-height: 62px;
+    gap: 12px;
+    padding: 13px 0;
+  }
+
+  .topbar > span {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .topbar > span:last-child {
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .sidebar nav a {
+    font-size: 14px;
+    padding: 11px 9px;
+  }
+
+  .sidebar .search-trigger {
+    font-size: 14px;
+  }
+
+  .hardware-map {
+    gap: 12px;
+  }
+
+  .hardware-node {
+    padding: 14px;
+  }
+
+  .hardware-node-index {
+    margin-bottom: 14px;
+  }
+
+  .hardware-detail h3,
+  .firmware-detail h3 {
+    font-size: 27px;
+    line-height: 1.2;
+  }
+
+  .deep-dive summary {
+    flex-wrap: wrap;
+    column-gap: 12px;
+    row-gap: 5px;
+    position: relative;
+    padding-right: 28px;
+  }
+
+  .deep-dive summary > span {
+    width: 100%;
+    min-width: 100%;
+    max-width: none;
+  }
+
+  .deep-dive summary > b {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -10px;
+  }
+
+  .synthesis-intro,
+  .math-grid,
+  .firmware-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .firmware-detail-grid {
+    gap: 24px;
+  }
+
+  .glossary > div {
+    grid-template-columns: 105px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .closing-note h3 {
+    font-size: 34px;
+  }
+
+  .version-note {
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .version-note > span {
+    max-width: none;
+  }
+
+  .sl-topline {
+    padding: 15px 18px;
+  }
+
+  .sl-model-tag {
+    font-size: 11px;
+  }
+
+  .sl-keyboard {
+    margin: 5px 0 0;
+  }
+
+  .sl-status {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h2,
+  .section-heading h2 {
+    font-size: 32px;
+  }
+
+  .hero h1 {
+    font-size: 54px;
+  }
+
+  .hero-lead {
+    font-size: 19px;
+  }
+
+  .eyebrow,
+  .hero-copy .eyebrow {
+    gap: 10px;
+  }
+
+  .hero-visual {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .figure-top {
+    font-size: 10px;
+  }
+
+  .figure-bottom span {
+    max-width: 180px;
+    font-size: 10px;
+  }
+
+  .orbit-label {
+    display: none;
+  }
+
+  .hardware-node-title {
+    font-size: 16px;
+  }
+
+  .hardware-detail,
+  .firmware-detail {
+    padding: 22px 18px;
+  }
+
+  .hardware-detail p,
+  .three-columns p,
+  .signal-detail p,
+  .deadline-grid p,
+  .deep-dive > div,
+  .synthesis-intro p,
+  .experiment-list p,
+  .boundary-banner p,
+  .reading-route ol,
+  .version-note p,
+  .path-card p,
+  .recipe-panel p,
+  .recipe-panel ol,
+  .arrival-checks label,
+  .glossary dd,
+  .source-list p,
+  .code-pane p,
+  .code-pane ul,
+  .code-pane ol,
+  .firmware-detail p,
+  .firmware-detail ul {
+    font-size: 15.5px;
+    line-height: 1.72;
+  }
+
+  pre,
+  .code-pane pre,
+  .path-card pre {
+    font-size: 12.5px;
+    line-height: 1.8;
+    padding: 18px 14px;
+  }
+
+  .glossary > div {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .glossary dt {
+    font-size: 14px;
+  }
+
+  .source-list > a {
+    padding-left: 17px;
+  }
+
+  .sl-parameters {
+    column-gap: 18px;
+  }
+
+  .sl-scope-head,
+  .sl-spectrum-head {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .sl-scope-head span:last-child,
+  .sl-spectrum-head span:last-child {
+    text-align: left;
+  }
+
+  .sl-readouts {
+    gap: 10px;
+  }
+
+  .sl-keyboard {
+    flex-basis: 100%;
+  }
+
+  .sl-keyboard button {
+    width: 34px;
+  }
+}
+
+@media print {
+  body {
+    font-size: 12pt;
+  }
+
+  h2,
+  .section-heading h2 {
+    font-size: 26pt;
+  }
+
+  .hero h1 {
+    font-size: 38pt;
+  }
+}

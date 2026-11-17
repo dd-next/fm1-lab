@@ -2,11 +2,21 @@ import { mountHardware, hardwareNodes } from './hardware.js';
 import { mountSoundLab } from './sound-lab.js';
 import { mountCodeExplorer, codeTopics } from './code-explorer.js';
 import { mountFirmwares, firmwareCatalog } from './firmwares.js';
+import { mountSignalAtlas, atlasScenarios } from './signal-atlas.js';
+import { mountOperatorExplorer } from './operator-explorer.js';
+import { mountBuildMap } from './build-map.js';
 
-for (const [mount, selector] of [[mountHardware, '#hardware-explorer'], [mountSoundLab, '#sound-lab'], [mountCodeExplorer, '#code-explorer'], [mountFirmwares, '#firmware-explorer']]) {
-  try { mount(document.querySelector(selector)); }
-  catch (error) { console.error(`Could not initialize ${selector}`, error); }
+function mountSafely(mount, selector, options) {
+  try { return mount(document.querySelector(selector), options); }
+  catch (error) { console.error(`Could not initialize ${selector}`, error); return null; }
 }
+mountSafely(mountHardware, '#hardware-explorer');
+mountSafely(mountSoundLab, '#sound-lab');
+const codeExplorer = mountSafely(mountCodeExplorer, '#code-explorer');
+mountSafely(mountFirmwares, '#firmware-explorer');
+mountSafely(mountSignalAtlas, '#signal-atlas', { onInspectHardware: id => document.querySelector(`[data-hardware="${id}"]`)?.click() });
+mountSafely(mountOperatorExplorer, '#operator-explorer');
+mountSafely(mountBuildMap, '#build-map', { onSelectTopic: index => codeExplorer?.select(index) });
 
 const sourceBase = 'https://github.com/m-vave/fm1_open/blob/4c7496daac04a95ff10d1afdcc8f9ead2dbabc41/';
 const stages = [
@@ -104,6 +114,7 @@ setActiveSection();
 
 const dialog = document.querySelector('#search-dialog'), search = document.querySelector('#guide-search'), results = document.querySelector('#search-results');
 const extraIndex = [
+  ['overview', 'Signal explorer · key press · USB MIDI · encoder · preset · SRAM · flash · DMA · display', atlasScenarios.map(scenario => `${scenario.name} ${scenario.intro}`).join(' ')],
   ['hardware', 'DMA · ADC · SPI · AC791N · flash · screen · SRAM · battery · UC25HQ80', 'Inspect the functional map and select a component to read its code and evidence.'],
   ['code', 'Boot · startup · MIDI · interrupt · engine · build · DX7 · operator · sequencer · envelope · screen.c', 'Six source-reading routes explain board startup, messages, the audio deadline, state, build boundaries and FM DSP.'],
   ['firmware', 'Stock V16 · FM1 Open V14 · Felucca · SLOOP · Clipper · Melodee · Dinghy · firmware · GPL · MIT', 'Filter seven projects by your goal, then select one for architecture, compatibility and source references.'],
