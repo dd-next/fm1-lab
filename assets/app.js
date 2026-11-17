@@ -108,7 +108,7 @@ const extraIndex = [
   ['code', 'Boot · startup · MIDI · interrupt · engine · build · DX7 · operator · sequencer · envelope · screen.c', 'Six source-reading routes explain board startup, messages, the audio deadline, state, build boundaries and FM DSP.'],
   ['firmware', 'Stock V16 · FM1 Open V14 · Felucca · SLOOP · Clipper · Melodee · Dinghy · firmware · GPL · MIT', 'Filter seven projects by your goal, then select one for architecture, compatibility and source references.'],
 ];
-const searchIndex = chapters.map(section => ({ id: section.id, title: section.querySelector('h1,h2')?.textContent.replace(/\s+/g, ' ') || section.id, text: section.textContent.replace(/\s+/g, ' ') }));
+const searchIndex = chapters.map(section => ({ id: section.id, title: section.querySelector('h1,h2')?.innerText.replace(/\s+/g, ' ') || section.id, text: section.textContent.replace(/\s+/g, ' ') }));
 extraIndex.forEach(([id, keywords, text]) => { const item = searchIndex.find(row => row.id === id); item.text += ` ${keywords} ${text}`; });
 for (const [id, rows] of [['hardware', hardwareNodes], ['code', codeTopics], ['firmware', firmwareCatalog]]) {
   searchIndex.find(item => item.id === id).text += ' ' + rows.map(row => Object.values(row).flat(3).join(' ')).join(' ');

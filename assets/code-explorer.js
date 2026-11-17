@@ -239,7 +239,7 @@ export function mountCodeExplorer(container) {
     const notes = element('div', 'code-notes');
     topic.notes.forEach(([title, copy]) => {
       const note = element('p');
-      note.append(element('strong', '', `${title}. `), document.createTextNode(copy));
+      note.append(element('strong', '', `${title}${/[.!?]$/.test(title) ? '' : '.'} `), document.createTextNode(copy));
       notes.append(note);
     });
     const links = element('nav', 'code-sources');
