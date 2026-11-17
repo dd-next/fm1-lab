@@ -24,7 +24,7 @@ for (const file of ['index.html', 'docs/research.html']) {
 for (const file of ['app.js','hardware.js','code-explorer.js','firmwares.js','sound-lab.js']) {
   const text = await readFile(resolve(root, 'assets', file), 'utf8');
   for (const [, path] of text.matchAll(/from\s+['"](\.\.?\/[^'"]+)['"]/g)) {
-    try { await access(resolve(root, 'assets', path)); } catch { failures.push(`${file}: missing import ${path}`); }
+    try { await access(resolve(root, 'assets', path.split('?')[0])); } catch { failures.push(`${file}: missing import ${path}`); }
   }
 }
 if (failures.length) { console.error(failures.join('\n')); process.exitCode = 1; }

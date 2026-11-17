@@ -1,10 +1,10 @@
-import { mountHardware, hardwareNodes } from './hardware.js';
-import { mountSoundLab } from './sound-lab.js';
-import { mountCodeExplorer, codeTopics } from './code-explorer.js';
-import { mountFirmwares, firmwareCatalog } from './firmwares.js';
-import { mountSignalAtlas, atlasScenarios } from './signal-atlas.js';
-import { mountOperatorExplorer } from './operator-explorer.js';
-import { mountBuildMap } from './build-map.js';
+import { mountHardware, hardwareNodes } from './hardware.js?v=2';
+import { mountSoundLab } from './sound-lab.js?v=2';
+import { mountCodeExplorer, codeTopics } from './code-explorer.js?v=2';
+import { mountFirmwares, firmwareCatalog } from './firmwares.js?v=2';
+import { mountSignalAtlas, atlasScenarios } from './signal-atlas.js?v=2';
+import { mountOperatorExplorer } from './operator-explorer.js?v=2';
+import { mountBuildMap } from './build-map.js?v=2';
 
 function mountSafely(mount, selector, options) {
   try { return mount(document.querySelector(selector), options); }
